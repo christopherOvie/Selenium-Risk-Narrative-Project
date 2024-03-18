@@ -4,14 +4,14 @@ import java.util.Random;
 
 public class RandomUtility
 {
-	    public static String generateRandomEmail() 
+	  /*  public static String generateRandomEmail() 
 	    {
 	        String[] domains={"gmail.com", "yahoo.com", "hotmail.com", "example.com"};
 	        Random rand=new Random();
 	        String username=generateRandomString(8); // You can specify the username length
 	        String domain=domains[rand.nextInt(domains.length)];
 	        return(username+"@"+domain);
-	    }
+	    }*/
 
 	    public static String generateRandomString(int length) 
 	    {

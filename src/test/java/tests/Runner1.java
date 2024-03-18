@@ -3,21 +3,20 @@ package tests;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
-//Smoke testing
+//add @smoketest tag to required scenarios or scenario outlines in feature files manually, 
+//which are passed previously but related to failed scenarios. So need to run again.
+//Regression testing
 @CucumberOptions(
-		dryRun=false,
 		features={"src\\test\\resources\\features"},
 		glue={"gluecode"},
 		tags="@smoketest",
+		dryRun=false,
 		monochrome=true,
 		plugin={"pretty","html:target/smoketestres",
-				         "json:target/smoketestres.json",
-				         "junit:target/smoketestres.xml",
-				         "rerun:target/failedsmoketestscenarios.txt"}
+				                            "rerun:target/failedsmoketestres.txt"}
 		)
 public class Runner1 extends AbstractTestNGCucumberTests
 {
-	// This class will be empty by default 
 }
 
 

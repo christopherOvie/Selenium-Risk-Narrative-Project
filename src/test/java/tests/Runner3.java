@@ -1,16 +1,21 @@
 package tests;
+
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
-//Re-testing(run previously failed scenarios only on modified software)
 @CucumberOptions(
-		features={"@target/realtestfailedres.txt"},
+		features={"src\\test\\resources\\features"},
 		glue={"gluecode"},
 		monochrome=true,
-		plugin={"pretty","html:target/retestres","rerun:target/retestfailedres.txt"}
+		plugin={"pretty",
+				"html:target/mycucumber.html",
+				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}
 		)
 public class Runner3 extends AbstractTestNGCucumberTests
 {
+	//install scoop CLI
+	//install allure CLI
+	//discussion about allure reports   
 }
 
 

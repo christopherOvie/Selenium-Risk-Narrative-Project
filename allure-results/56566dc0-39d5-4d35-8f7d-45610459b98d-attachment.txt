@@ -1,0 +1,1 @@
+Verify elements under "Transform Your Risk Decision Making" heading is completed with status:UNDEFINED

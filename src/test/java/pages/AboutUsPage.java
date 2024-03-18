@@ -26,10 +26,6 @@ public class AboutUsPage {
 	private WebElement careers;
 	
 	
-	@FindBy(xpath = "//div/a[contains(text(),'Search all jobs')]")
-	private WebElement searchAllJobs;
-	
-	
 	public void clickOnCareers() throws InterruptedException {
 		
 		WebElement elementToHoverAndClick = careers;
@@ -45,12 +41,7 @@ public class AboutUsPage {
 		}
 	
 	
-	public void clickOnSearchAllJobs() throws InterruptedException {
-		ArrayList<String> wid = new ArrayList<String>(driver.getWindowHandles()) ;
-        driver.switchTo().window(wid.get(1));
 
-        wait.until(ExpectedConditions.visibilityOf(searchAllJobs)).click();
-	}
 	
 	
 }
