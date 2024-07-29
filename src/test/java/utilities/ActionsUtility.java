@@ -78,19 +78,19 @@ public class ActionsUtility
 		return(temp);
 	}
 	
-	public String getDynamicToolTipText(WebElement e)
-	{
-		wait.until(ExpectedConditions.visibilityOf(e));
-		act.moveToElement(e).pause(5000).clickAndHold(e).pause(5000).build().perform();
-		WebElement tt=e.findElement(By.xpath("child::span"));
-		String temp=tt.getText();
-		act.release(e).perform();
-		return(temp);
-	}
+	// public String getDynamicToolTipText(WebElement e)
+	// {
+	// 	wait.until(ExpectedConditions.visibilityOf(e));
+	// 	act.moveToElement(e).pause(5000).clickAndHold(e).pause(5000).build().perform();
+	// 	WebElement tt=e.findElement(By.xpath("child::span"));
+	// 	String temp=tt.getText();
+	// 	act.release(e).perform();
+	// 	return(temp);
+	// }
 	
-	public void moveSlider(WebElement e, int xoffset, int yoffset)
-	{
-		wait.until(ExpectedConditions.visibilityOf(e));
-		act.dragAndDropBy(e,xoffset,yoffset).pause(5000).build().perform(); 
-	}
+	// public void moveSlider(WebElement e, int xoffset, int yoffset)
+	// {
+	// 	wait.until(ExpectedConditions.visibilityOf(e));
+	// 	act.dragAndDropBy(e,xoffset,yoffset).pause(5000).build().perform(); 
+	// }
 }
